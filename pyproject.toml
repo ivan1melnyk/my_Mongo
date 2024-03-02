@@ -1,14 +1,13 @@
 [tool.poetry]
-name = "mongo"
+name = "home-work-9"
 version = "0.1.0"
 description = ""
-authors = ["ivan1melnyk <melnyk.ivan20a@gmail.com>"]
+authors = ["Ivan20a <melnyk.ivan20a@gmail.com>"]
 readme = "README.md"
 
 [tool.poetry.dependencies]
-python = "^3.11"
-redis = "^5.0.1"
-pika = "^1.3.2"
+python = "^3.12"
+scrapy = "^2.11.1"
 
 
 [build-system]

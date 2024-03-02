@@ -1,10 +1,8 @@
 from models import Author, Quote
-from my_data import connection_string
-import sys
 import json
 from mongoengine import connect
 
-
+connection_string = "mongodb+srv://melnykivan20a:<password>@ivan20a.c0mc4dz.mongodb.net/?retryWrites=true&w=majority&appName=ivan20a"
 connect('mydatabase', host=connection_string)
 
 
@@ -14,8 +12,7 @@ def load_authors_from_json(file_path):
         authors_data = json.load(file)
         # result_authors = db.mydatabase.insert_many(authors_data)
         for author in authors_data:
-            author_record = Author(fullname=author["fullname"], born_date=author["born_date"],
-                                   born_location=author["born_location"], description=author["description"])
+            author_record = Author(fullname=author["fullname"], born_date=author["born_date"], born_location=author["born_location"], description=author["description"])
             author_record.save()
 
 
